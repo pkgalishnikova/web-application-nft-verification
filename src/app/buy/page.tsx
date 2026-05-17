@@ -141,7 +141,7 @@ export default function EmbedMintPage() {
       formData.append("image", file);
       formData.append("wallet_address", wallet);
 
-      const embedRes = await fetch("https://web-application-nft-verification.onrender.com/embed", {
+      const embedRes = await fetch("https://polar-expire-postage.ngrok-free.dev/embed", {
         method: "POST", body: formData,
       });
       if (!embedRes.ok) throw new Error("Embedding failed");
@@ -153,7 +153,7 @@ export default function EmbedMintPage() {
       ipfsForm.append("image", embedBlob, "watermarked.png");
       ipfsForm.append("name", file.name.replace(/\.[^.]+$/, "") || "My NFT");
 
-      const ipfsRes = await fetch("https://web-application-nft-verification.onrender.com/upload-ipfs", {
+      const ipfsRes = await fetch("https://polar-expire-postage.ngrok-free.dev/upload-ipfs", {
         method: "POST", body: ipfsForm,
       });
       if (!ipfsRes.ok) throw new Error("IPFS upload failed");
