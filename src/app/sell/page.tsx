@@ -201,7 +201,7 @@ export default function VerifyPage() {
       formData.append("image", file);
       formData.append("wallet_address", wallet);
 
-      const res = await fetch("https://web-application-nft-verification.onrender.com/verify", {
+      const res = await fetch("https://polar-expire-postage.ngrok-free.dev/verify", {
         method: "POST",
         body: formData,
       });
